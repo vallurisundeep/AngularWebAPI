@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Webapi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
@@ -31,3 +32,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Angular CRUD with web API
 >>>>>>> 29b6cb463025add1d7534853f3fa2ef59a24dcff
+=======
+# AngularRestAPI
+CRUD operation with angular8
+>>>>>>> 4be02c3671c4ce18f9c09ccce9f2118ea1ec98bd
