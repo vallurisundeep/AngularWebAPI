@@ -8,16 +8,26 @@ import{Webapi} from '../webapi';
 })
 export class DetailsComponent implements OnInit {
   
-  Webapis:Webapi[];
+  //Webapis:Webapi[];
+  Webapis:any;
+  flgnoData:boolean=false;
   constructor(private webapiService:WebapiService) { }
 
   ngOnInit() {
     this.webapiService.getAllPosts().subscribe(
 (response:Webapi[])=>{
-  debugger
+  if(response.length>0 && response!=undefined && response!=null){
   this.Webapis=response;
+
+  this.flgnoData=true;
+  }
 }
     );
+
+    var data1=this.webapiService.getData();
+    console.log(data1)
   }
+
+
 
 }

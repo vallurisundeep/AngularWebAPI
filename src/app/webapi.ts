@@ -1,19 +1,17 @@
 export class Webapi {
 
-    "id": number;
-    "employee_salary": number;
-    "employee_age": number;
+    "_id": number;
+    
      
-    "employee_name": string
-    "profile_image": string;
+    "title": string
+    "description": string;
 
 
     constructor(){
        
-        this.id=0;
-        this.employee_salary=0;
-        this.employee_age=0;
-        this.employee_name=null;
-        this.profile_image=null;
+        this._id=0;
+    
+        this.title=null;
+        this.description=null;
     }
 }

@@ -1,24 +1,23 @@
 <div class="container">
 
-  <h1>Employee Details</h1>
-<table class="table table-striped">
+  <h1>Family Details</h1>
+  
+  <table class="table table-striped" *ngIf="flgnoData">
   <thead>
     <tr>
       <th>Id</th>
-      <th>Employee Name</th>
-      <th>Employee Salary</th>
-      <th>Employee Age</th>
-      <th>Profile Image</th>
+      <th>Title</th>
+      <th>Desciption</th>
+       
     </tr>
   </thead>
-  <tbody *ngIf="Webapis">
+  <tbody>
    
-    <tr *ngFor="let webapi of Webapis.data">
-      <td>{{webapi.id}}</td>
-      <td>{{webapi.employee_name}}</td>
-      <td>{{webapi.employee_salary}}</td>
-      <td>{{webapi.employee_age}}</td>
-      <td>{{webapi.profile_image}}</td>
+    <tr *ngFor="let webapi of Webapis">
+      <td>{{webapi['_id']}}</td>
+      <td>{{webapi['title']}}</td>
+      <td>{{webapi['description']}}</td>
+       
     </tr>
  
   </tbody>
