@@ -16,13 +16,10 @@ export class WebapiService {
 
    getAllPosts():Observable<Data>{
       
-    return this.httpClient.get<Data>("http://localhost:5000/posts");
+    return this.httpClient.get<Data>("http://localhost:3000/posts");
    }
 
-   getData(){
-     let url="http://localhost:5000/posts/60e33eb3c10c73a73c857531";
-     return this.httpClient.get(url);
-   }
+   
 
 
 }

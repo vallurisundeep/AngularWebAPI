@@ -1,17 +1,27 @@
 export class Webapi {
 
     "_id": number;
-    
+    "empid":number;
+    "fname":string;
+    "lname":string;
+    "gender":string;
+    "email":string;
+    "age":number;
+    "doj":string;
      
-    "title": string
-    "description": string;
+     
 
 
     constructor(){
        
         this._id=0;
     
-        this.title=null;
-        this.description=null;
+        this.empid=null;
+        this.fname=null;
+        this.lname=null;
+        this.gender=null;
+        this.email=null;
+        this.age=null;
+        this.doj=null;
     }
 }
