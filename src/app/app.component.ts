@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { WebapiService } from './webapi.service';
-import{Webapi} from './webapi';
+import{empService} from './webapi';
 
 @Component({
   selector: 'app-root',
@@ -8,23 +8,31 @@ import{Webapi} from './webapi';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'webapi';
-//Webapis:Webapi[];
-Webapis:any;
+  title = 'listEmpData';
+listEmpData:any;
 flgnoData:boolean=false;
+btnName:string="Show Employee Data";
 constructor(private webapiService:WebapiService) { }
 
 
 getEmployees(){
- 
+ if(this.flgnoData){
+  this.flgnoData=false;
+  this.btnName="Show Employees Data"
+ }else{
+
+
   this.webapiService.getAllPosts().subscribe(
-    (response:Webapi[])=>{
+    (response:empService[])=>{
     if(response.length>0 && response!=undefined && response!=null){
-    this.Webapis=response;
+    this.listEmpData=response;
 
     this.flgnoData=true;
+    this.btnName="Hide Employees Data"
     }
     });
+ }
+  
 }
   
 }

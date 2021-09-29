@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import{HttpClient} from '@angular/common/http';
 import{Observable} from 'rxjs';
-import { Webapi } from './webapi';
+import { empService } from './webapi';
 import { Data } from '@angular/router';
 @Injectable({
   providedIn: 'root'

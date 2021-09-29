@@ -2,7 +2,7 @@
 <div class="container">
     
     <p class="mt-4">Employee Data will be populated on click of "<strong>Show Employee</strong>" button</p>
-    <button  class="btn btn-primary mt-2 mb-4" (click)="getEmployees()">Show Employees</button>
+    <button  class="btn btn-primary mt-2 mb-4" (click)="getEmployees()" >{{btnName}}</button>
     <div *ngIf="flgnoData"    >
 
         <h2 class="title mb-3">Employee Details</h2>
@@ -22,14 +22,15 @@
         </thead>
         <tbody>
          
-          <tr *ngFor="let webapi of Webapis">
-            <td>{{webapi['empid']}}</td>
-            <td>{{webapi['fname']}}</td>
-            <td>{{webapi['lname']}}</td>
-            <td>{{webapi['gender']}}</td>
-            <td>{{webapi['email']}}</td>
-            <td>{{webapi['age']}}</td>
-            <td>{{webapi['doj']}}</td>
+          <tr *ngFor="let list of listEmpData; let i=index">
+            
+            <td>{{list['empid']}}</td>
+            <td>{{list['fname']}}</td>
+            <td>{{list['lname']}}</td>
+            <td>{{list['gender']}}</td>
+            <td>{{list['email']}}</td>
+            <td>{{list['age']}}</td>
+            <td>{{list['doj']}}</td>
              
           </tr>
        

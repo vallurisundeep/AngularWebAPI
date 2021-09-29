@@ -1,4 +1,4 @@
-export class Webapi {
+export class empService {
 
     "_id": number;
     "empid":number;
